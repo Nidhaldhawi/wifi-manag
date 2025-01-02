@@ -1,4 +1,3 @@
-// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -51,31 +50,3 @@ export default {
   },
   plugins: [],
 }
-
-// vite.config.js
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
-
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-})
-
-// .env
-VITE_API_URL=http://localhost:3001
-ROUTER_IP=192.168.1.1
-ROUTER_USERNAME=admin
-ROUTER_PASSWORD=your_password
-
-// .gitignore
-node_modules
-dist
-.env
-.env.local
-.DS_Store
-*.log
